@@ -5,6 +5,10 @@
 #include "Game.h"
 #include "Map.h"
 #include "Snake.h"
+#include "Fruit.h"
+#include "SuperFruit.h"
+#include "Vector2.h"
+#include "GameObject.h"
 
 Game::Game()
 {
@@ -19,14 +23,16 @@ void Game::run()
 
 	map.setSize( mapWidth, mapHeight );
 
-	struct Vector2 snakePos;
+	Vector2 snakePos;
+	Vector2 fruitPos;
 
-	snakePos = map.getRandomPos();
+	snakePos.x = mapWidth / 2;
+	snakePos.y = mapHeight / 2;
 
-	//snakePos.x = mapWidth / 2;
-	//snakePos.y = mapHeight / 2;
+	fruitPos = map.getRandomPos();
 
 	snake.setPosition(snakePos);
+	//fruit.setFRPosition(fruitPos);
 
 	// Game loop
 	while ( !m_gameOver )
@@ -76,7 +82,8 @@ void Game::draw() {
 	//clear the screen
 	system("cls");
 	
-	struct Vector2 snakePos = snake.getPosition();
+	Vector2 snakePos = snake.getPosition();
+	//Vector2 fruitPos = fruit.getFRPosition();
 
 
 	for ( int y = 0; y < map.getHeight(); y++ )
@@ -85,7 +92,12 @@ void Game::draw() {
 		{
 			if ( x == snakePos.x && y == snakePos.y ) {
 				std::cout << "C";
-			}
+			}/*
+			else if (x == fruitPos.x && y == fruitPos.y )
+			{
+				std::cout << "O";
+			}*/
+
 			else 
 			{
 				std::cout << ".";

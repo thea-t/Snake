@@ -1,6 +1,8 @@
 #ifndef MAP_H
 #define MAP_H
 
+#include "Vector2.h"
+
 class Map
 {
 private:
@@ -15,7 +17,7 @@ public:
 	int getHeight();
 	int getWidth();
 
-	struct Vector2 getRandomPos();
+	Vector2 getRandomPos();
 
 	void setSize(int, int);
 };
