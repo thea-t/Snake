@@ -1,30 +1,28 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 
-enum Direction { Left, Right, Up, Down };
 
-struct Vector2
-{
-	int x;
-	int y;
-};
+#include "Vector2.h"
+#include "Direction.h"
+#include "GameObject.h"
 
 class Snake
 {
 private:
-	Direction m_direction;
+
 	Vector2 m_position;
+	Direction m_direction;
 
 public:
 	Snake();
 	~Snake();
 
+	void setPosition(Vector2 position);
+	Vector2 getPosition();
 
 	bool tryMove( int, int );
 	void setDirection(Direction);
 
-	void setPosition(Vector2 pos);
-	Vector2 getPosition();
 };
 
 #endif
