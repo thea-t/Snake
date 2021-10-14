@@ -65,12 +65,12 @@ void Snake::setDirection(Direction dir)
 	m_direction = dir;
 }
 
-void Snake::setPosition(Vector2 position)
+void Snake::setPosition(struct Vector2 position)
 {
 	m_position = position;
 }
 
-Vector2 Snake::getPosition()
+ Vector2 Snake::getPosition()
 {
 	return m_position;
 }

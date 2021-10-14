@@ -3,10 +3,6 @@
 
 #include "Map.h"
 #include "Snake.h"
-#include "Vector2.h"
-#include "GameObject.h"
-#include "Fruit.h"
-#include "SuperFruit.h"
 
 class Game
 {
@@ -18,7 +14,6 @@ public:
 	
 	Map map;
 	Snake snake;
-	//SuperFruit superFruit;
 
 	void draw();
 	void readInput();

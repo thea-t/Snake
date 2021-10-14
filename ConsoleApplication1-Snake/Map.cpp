@@ -1,4 +1,5 @@
 #include "Map.h"
+#include "Snake.h"
 #include <stdlib.h> 
 
 Map::Map()
@@ -29,9 +30,9 @@ void Map::setSize( int width, int height )
     m_height = height;
 }
 
-Vector2 Map::getRandomPos() 
+struct Vector2 Map::getRandomPos() 
 {
-    Vector2 position;
+    struct Vector2 position;
 
     position.x = rand() % m_width;
     position.y = rand() % m_height;
