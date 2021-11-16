@@ -1,0 +1,4 @@
+C:\PROJECTS\c++\SnakeGame\Debug\SnakeGame.exe
+C:\PROJECTS\c++\SnakeGame\Snake-game\Debug\SnakeGame.exe
+C:\PROJECTS\Snake-game\Debug\SnakeGame.exe
+D:\PROJECTS\PROJECTS - C++\Snake-game\Debug\SnakeGame.exe
